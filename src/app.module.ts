@@ -17,6 +17,7 @@ import {User} from './user/user.entity'; // Ensure this path is correct
         database: configService.get<string>('AZURE_SQL_DATABASE'), // Get database name from config
         entities: [User], // Entities to be loaded
         synchronize: true, // Reflects entities in the database, use cautiously in production
+        logging: 'all', // debugging only, will slow down the application
         options: {
           encrypt: true,
           trustServerCertificate: false
